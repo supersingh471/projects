@@ -1,6 +1,6 @@
 
 export const Appbar = () => {
-	return <div className="flex justify-between shadow-md rounded h-14 m-4">
+	return <div className="flex justify-between shadow-xl/30 rounded h-14 m-4">
 				<div className="flex flex-col justify-center h-full ml-4">
 					PayTM App
 				</div>
