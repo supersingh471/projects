@@ -2,7 +2,7 @@ import { Heading } from "../components/Heading";
 import { SubHeading } from "../components/SubHeading";
 import { InputBox } from "../components/InputBox";
 import { Button } from "../components/Button";
-import { BottonWarning } from "../components/BottomWarning";
+import { BottomWarning } from "../components/BottomWarning";
 
 export const Signin = () => {
 	return <div className="bg-slate-300 flex justify-center h-screen">
@@ -15,7 +15,7 @@ export const Signin = () => {
 				<div>
 					<Button label={"Sign In"}/>
 				</div>
-				<BottonWarning label={"Don't have an account?"} buttonText={"Sign Up"} to={"/signup"}/>
+				<BottomWarning label={"Don't have an account?"} buttonText={"Sign Up"} to={"/signup"}/>
 			</div>
 		</div>
 	</div>

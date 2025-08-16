@@ -4,7 +4,7 @@ import { Users } from "../components/Users"
 
 
 export const Dashboard = () => {
-	return <div className="">
+	return <div>
 		<Appbar/>
 		<Balance/>
 		<Users/>

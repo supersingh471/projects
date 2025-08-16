@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 
-export function BottonWarning({label, buttonText, to}) {
+export function BottomWarning({label, buttonText, to}) {
 	return <div className="flex justify-center p-1">
 		<div className="text-md">
 			{label}
