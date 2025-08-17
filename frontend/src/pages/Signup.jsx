@@ -32,12 +32,13 @@ return (
 				}} placeholder={"123456"} label={"Password"}/>
 				<div>
 					<Button onClick={() => {
-						axios.post("http://localhost:3000/api/v1/user/signup", {
+						const response = axios.post("http://localhost:3000/api/v1/user/signup", {
 							firstName,
 							lastName,
 							username,
 							password
-						})
+						});
+						localStorage.setItem("token", response.data.token);
 					}} label={"Sign up"}/>
 				</div>
 				<BottomWarning label={"Already have an account?"} buttonText={"Signin"} to={"/signin"}/>
