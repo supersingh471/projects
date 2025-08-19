@@ -33,15 +33,20 @@ return (
 					setPassword(e.target.value);
 				}} placeholder={"123456"} label={"Password"}/>
 				<div>
-					<Button onClick={() => {
-						const response = axios.post("http://localhost:3000/api/v1/user/signup", {
+					<Button onClick={async () => {
+						try {
+							const response = await axios.post("http://localhost:3000/api/v1/user/signup", {
 							firstName,
 							lastName,
 							username,
 							password
 						});
 						localStorage.setItem("token", response.data.token)
-						navigate("/dashboard"); 
+						navigate("/dashboard");
+						} catch(error) {
+							console.error("Signup failed:", error.response?.data || error.message);
+							alert("Signup failed. Please try again");
+						}
 					}} label={"Sign up"}/>
 				</div>
 				<BottomWarning label={"Already have an account?"} buttonText={"Signin"} to={"/signin"}/>
